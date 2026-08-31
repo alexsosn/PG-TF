@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+dist/
+build/
+.coverage
+htmlcov/
+.DS_Store
+
+# Local source archives and generated corpora
+*.zip
+data/raw/
+data/generated/
+tf/
