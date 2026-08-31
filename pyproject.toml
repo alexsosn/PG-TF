@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pg-tf"
+version = "0.0.0"
+description = "Text-Fabric converter for the CGPG Patrologia Graeca corpus"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "text-fabric>=13.1,<14",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
