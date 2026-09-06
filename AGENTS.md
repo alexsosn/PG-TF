@@ -11,8 +11,9 @@ Before changing code, read:
 3. `wiki/README.md`
 4. `wiki/agentic-dev-loop.md`
 5. `wiki/architecture.md`
-6. `wiki/testing.md`
-7. the issue being implemented and any linked PR/discussion
+6. `docs/architecture/ADR-0001-empty-slots-not-sidecars.md`
+7. `wiki/testing.md`
+8. the issue being implemented and any linked PR/discussion
 
 ## Non-negotiable rules
 
@@ -27,6 +28,7 @@ Before changing code, read:
 - Keep builds deterministic and record upstream version/checksums.
 - Do not ingest or redistribute TLG data without an explicit, documented decision about source and terms.
 - Keep unrelated cleanup out of implementation PRs.
+- For Text-Fabric zero-span handling, follow `docs/architecture/ADR-0001-empty-slots-not-sidecars.md`: independently positioned textual entities use explicit empty/synthetic slots; do not invent a sidecar merely to satisfy `oslots`. Distinguish semantic/source slots, synthetic slots, and total TF slots. A sidecar deviation requires a corpus-specific ADR and independent review.
 
 ## Definition of done
 
@@ -54,6 +56,7 @@ Keep issues small enough to review independently. Separate mechanical conversion
 - `wiki/backlog.md`: staged implementation plan
 - `wiki/testing.md`: validation and TDD requirements
 - `wiki/agentic-dev-loop.md`: exact automated loop
+- `docs/architecture/ADR-0001-empty-slots-not-sidecars.md`: cross-corpus zero-span TF invariant
 
 ## Source data
 
